@@ -1,0 +1,107 @@
+<html>
+{{ partial "header.html" . }}
+    <body class="page services service-page service-detail-page">
+
+    {{ partial "navigation.html" . }}
+
+	<section id="breadcrumb">
+		<div class="container">
+			<div class="row">
+				<div class="col-md">
+					<h1>{{ .Params.service.name }}</h1>
+				</div>
+				<div class="col-md middle-md trail">
+					Home / Services / {{ .Params.service.name }}
+				</div>
+			</div>
+		</div>
+	</section>
+    <section id="service-content">
+	    <div class="container">
+		    <div class="row">
+		    <div class="col-md">
+			    <h1>{{ .Params.service.title }}</h1>
+		    </div>
+	    </div>
+	    <div class="row">
+		    <div class="col-md-4">
+			    <img src={{ printf "/images/services/%s.jpg" $.Params.service.name }}/>
+		    </div>
+		    <div class="col-md-8">
+			    {{ .Content }}
+		    </div>
+	    </div>
+	    </div>
+    </section>
+
+    <section id="service-details" class="bg-secondary">
+	    <div class="container">
+		    <div class="row section-title row">
+			    <div class="col-md">
+				    <h2>What is a ShopPulse Website?</h2>
+			    </div>
+		    </div>
+		    <div class="row">
+			    {{ range $.Params.service.points }}
+		        <div class="col-md-6">
+			        <h3>{{ .title }}</h3>
+			        <p>{{ .snippet }}</p>
+		        </div>
+		    {{ end }}
+		    </div>
+
+
+	    </div>
+    </section>
+    <section id="packages">
+	    <div class="container">
+		    <div class="row">
+			    <div class="col-md section-title">
+				    <h2>Our Packages</h2>
+			    </div>
+		    </div>
+		    <div class="row">
+			    <div class="col-md">
+				    <div class="package">
+					    <h3>Xpress</h3>
+					    <ul>
+						    <li>ShopPro Website</li>
+						    <li>Choice of one of three themes</li>
+						    <li>Customized to match your shop</li>
+						    <li>Local SEO optimized</li>
+					    </ul>
+					    <a href="#" class="button">Select</a>
+				    </div>
+			    </div>
+			    <div class="col-md">
+				    <div class="package">
+					    <h3>The Works</h3>
+					    <ul>
+						    <li>ShopPro Website</li>
+						    <li>Choice of one of three themes</li>
+						    <li>Customized to match your shop</li>
+						    <li>Local SEO optimized</li>
+					    </ul>
+					    <a href="#" class="button">Select</a>
+				    </div>
+			    </div>
+			    <div class="col-md">
+				    <div class="package">
+					    <h3>Custom</h3>
+					    <ul>
+						    <li>ShopPro Website</li>
+						    <li>Choice of one of three themes</li>
+						    <li>Customized to match your shop</li>
+						    <li>Local SEO optimized</li>
+					    </ul>
+					    <a href="#" class="button">Select</a>
+				    </div>
+			    </div>
+		    </div>
+	    </div>
+    </section>
+
+    {{ partial "ctas/start-a-project.html" . }}
+    {{ partial "footer.html" . }}
+    </body>
+</html>

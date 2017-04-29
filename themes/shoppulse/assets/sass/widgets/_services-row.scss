@@ -1,0 +1,27 @@
+.services-row {
+	background: rgba(170, 170, 170, 0.0980392);
+	h2 {
+		font-size:2.25rem;
+		text-align:center;
+		}
+
+	.column {
+		text-align:center;
+		}
+
+	.button.button-outline {
+		color: $brand-primary;
+		border-color: $brand-primary;
+		}
+
+	.button.button-outline:hover {
+		color: $brand-secondary;
+		border-color: $brand-secondary;
+		}
+
+	img {
+		display:block;
+		margin-left:auto;
+		margin-right: auto;
+		}
+	}

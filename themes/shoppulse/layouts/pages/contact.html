@@ -1,0 +1,93 @@
+<html>
+{{ partial "header.html" . }}
+    <body class="page pages content-page">
+
+    {{ partial "navigation.html" . }}
+
+	<section id="breadcrumb">
+		<div class="container">
+			<div class="row">
+				<div class="col-md">
+					<h1>{{ .Params.title }}</h1>
+				</div>
+				<div class="col-md middle-md trail">
+					<a href="/">Home</a> / Contact Us
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+    <section>
+	    <div class="container">
+	        <div class="row">
+		        <div class="col-md">
+			        <i class="fa fa-location"></i><br />
+			        Our Location<br />
+			        {{ .Params.address.state}}, {{ .Params.address.country }}
+		        </div>
+		        <div class="col-md">
+			        <i class="fa fa-phone"></i><br />
+			        Call Us<br/>
+			        {{ .Params.phone }}
+		        </div>
+		        <div class="col-md">
+			        <i class="fa fa-envelope-o"></i><br />
+			        Drop us a line<br />
+			        {{ .Params.email }}
+		        </div>
+	        </div>
+	    </div>
+    </section>
+
+     <section>
+	    <div class="container">
+		    <div class="row">
+			    <div class="col-md">
+				  <h2>Ready to see how ShopPulse can help you accelerate your shop?</h2>
+				    <h3>Our team of auto shop marketing specialists are standing by to help you!</h3>
+				    <form>
+					    <fieldset>
+						    <input type="text" placeholder="Name *"/>
+						    <input type="email" placeholder="E-mail *"/>
+						    <input type="tel" placeholder="Telephone" />
+						    <textarea placeholder="Message"></textarea>
+					    </fieldset>
+					    <input type="submit" value="Send Message" />
+				    </form>
+			    </div>
+		    </div>
+	    </div>
+    </section>
+
+    <section class="social-contact">
+	    <div class="container">
+		    <div class="row">
+			    <div class="col-md">
+				    <div class="circle-icon">
+					    <i class="fa fa-pinterest"></i>
+				    </div>
+				    <h3>Pinterested</h3>
+					    <strong>@ShopPulse</strong>
+			    </div>
+			    <div class="col-md">
+				    <div class="circle-icon">
+					    <i class="fa fa-twitter"></i>
+				    </div>
+				    <h3>Twitter</h3>
+					    <strong>@ShopPulse</strong>
+			    </div>
+			    <div class="col-md">
+				    <div class="circle-icon">
+					    <i class="fa fa-facebook"></i>
+				    </div>
+				    <h3>Facebook</h3>
+					    <strong>@ShopPulse</strong>
+			    </div>
+		    </div>
+	    </div>
+    </section>
+    {{ partial "footer.html" . }}
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<div class="contact-bar">
+        <section class="container">
+            <div class="row">
+                <div class="col-md-10">
+                    <div class="box">
+                        <div class="row">
+                            <div class="col-xs">
+                                <a href="tel:111-111-1111"><i class="fa fa-phone"></i> (111) 111-1111</a>
+                            </div>
+                            <div class="col-xs">
+                                <i class="fa fa-skype"></i> shoppulse
+                            </div>
+                            <div class="col-xs">
+                                <a href='mailto&#58;%73ales%40sh%6&#70;&#112;pu&#37;6Cs&#101;&#46;c%6Fm'><i class="fa fa-envelope"></i> sales&#64;sh&#111;&#112;&#112;&#117;lse&#46;co&#109;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 social">
+                    <a href="http://www.twitter.com/shoppulse"><i class="fa fa-twitter"></i></a>
+                    <a href="http://www.facebook.com/shoppulse"><i class="fa fa-facebook"></i></a>
+                    <a href="http://www.linkedin.com/shoppulse"><i class="fa fa-linkedin"></i></a>
+                    <a href="http://www.instagram.com/shoppulse"><i class="fa fa-instagram"></i></a>
+                    <a href="http://www.pinterest.com/shoppulse"><i class="fa fa-pinterest"></i></a>
+                </div>
+            </div>
+        </section>
+    </div>
+<aside>
+            <div id="sidebar" class="nav-collapse">
+            <section class="container">
+                <div class="row">
+                    <div class="col-md-3 logo">
+                        <a href="/"><object type="image/svg+xml" data="/images/shoppulselogo-light.svg" width="225" height="75"></object></a>
+                    </div>
+                    <div class="col-md-9 text-right">
+                        <!-- sidebar menu start-->
+                        <ul class="sidebar-menu">
+                          {{ $currentPage := . }}
+                          {{ range .Site.Menus.main }}
+                              {{ if .HasChildren }}
+
+                            <li class="sub-menu{{if $currentPage.HasMenuCurrent " main" . }} active{{end}}">
+                            <a href="javascript:;" class="">
+                                {{ .Pre }}
+                                <span>{{ .Name }}</span>
+                                <span class="menu-arrow arrow_carrot-right"></span>
+                            </a>
+                            <ul class="sub">
+                                {{ range .Children }}
+                                <li{{if $currentPage.IsMenuCurrent "main" . }} class="active"{{end}}><a href="{{.URL}}"> {{ .Name }} </a> </li>	{{ end }}
+                            </ul>
+                          {{else}}
+                            <li>
+                            <a href="{{.URL}}">
+                                {{ .Pre }}
+                                <span>{{ .Name }}</span>
+                            </a>
+                          {{end}}
+                          </li>
+                          {{end}}
+                        </ul>
+	                    <!-- sidebar menu end-->
+                    </div>
+
+            </div>
+
+            </section>
+                </div>
+        </aside>

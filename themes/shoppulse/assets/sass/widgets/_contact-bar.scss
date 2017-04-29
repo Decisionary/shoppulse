@@ -1,0 +1,19 @@
+div.contact-bar {
+	font-size:1.5em;
+	background: $brand-primary;
+	color:#FFF;
+	text-align:left;
+	a:any-link {
+		color:#fff;
+		text-decoration:none;
+		}
+	& > section.container {
+		margin-top:0;
+		margin-bottom:0;
+		padding:.5em 0;
+		}
+
+	.social {
+		text-align:right;
+		}
+	}

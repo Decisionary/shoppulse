@@ -1,0 +1,36 @@
+#sidebar {
+	background:#000;
+	width:100%;
+	& > section.container {
+		margin-top:0;
+		margin-bottom:0;
+		padding:0;
+		}
+	.logo {
+		object {
+			margin-top:1em;
+			pointer-events:none;
+			}
+		a {
+			display:inline-block;
+			}
+		}
+
+	ul {
+		margin:0;
+
+		text-align:right;
+		li {
+			list-style:none;
+			display:inline-block;
+			a {
+				font-size: 2rem;
+				padding: 2em .5em 0;
+				display:inline-block;
+				height:5em;
+				width:100%;
+				color: $brand-tertiary;
+				}
+			}
+		}
+	}

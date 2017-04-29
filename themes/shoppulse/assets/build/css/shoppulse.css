@@ -1,0 +1,198 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 32px;
+  font-size: 2rem; }
+
+div.container, div.container-fluid {
+  padding-top: 5em;
+  padding-bottom: 5em; }
+
+div.container > .row:first-child > .column, div.container-fluid > .row:first-child > .column {
+  margin-top: 0; }
+
+.text-right {
+  text-align: right; }
+
+@media only screen and (max-width: 480px) {
+  .col-md {
+    width: 100%;
+    text-align: center; } }
+
+.button, .button-primary, input[type='submit'] {
+  background-color: #EF3E3E;
+  color: #fff;
+  border-color: #EF3E3E; }
+
+.button:hover {
+  color: #fff;
+  background-color: #333;
+  border-color: #333; }
+
+#sidebar {
+  background: #000;
+  width: 100%; }
+  #sidebar > section.container {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0; }
+  #sidebar .logo object {
+    margin-top: 1em;
+    pointer-events: none; }
+  #sidebar .logo a {
+    display: inline-block; }
+  #sidebar ul {
+    margin: 0;
+    text-align: right; }
+    #sidebar ul li {
+      list-style: none;
+      display: inline-block; }
+      #sidebar ul li a {
+        font-size: 32px;
+        font-size: 2rem;
+        padding: 2em .5em 0;
+        display: inline-block;
+        height: 5em;
+        width: 100%;
+        color: #fff; }
+
+.services-row {
+  background: rgba(170, 170, 170, .0980392); }
+  .services-row h2 {
+    font-size: 36px;
+    font-size: 2.25rem;
+    text-align: center; }
+  .services-row .column {
+    text-align: center; }
+  .services-row .button.button-outline {
+    color: #627881;
+    border-color: #627881; }
+  .services-row .button.button-outline:hover {
+    color: #EF3E3E;
+    border-color: #EF3E3E; }
+  .services-row img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+
+.featured-projects {
+  background: #627881;
+  color: #fff; }
+  .featured-projects .button {
+    background-color: #333;
+    border-color: #333; }
+  .featured-projects h1 {
+    text-align: center; }
+  .featured-projects img {
+    display: block;
+    margin: 0 auto; }
+
+section.bg-offwhite {
+  background-color: #F7F7F7; }
+
+section.bg-secondary {
+  background-color: #627881;
+  color: #fff; }
+
+section.bg-black {
+  background-color: #000;
+  color: #fff; }
+
+#benefits img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.process h2 {
+  text-align: center; }
+
+#brands-carousel {
+  margin-top: 5em; }
+  #brands-carousel .col-md {
+    text-align: center; }
+
+div.contact-bar {
+  font-size: 1.5em;
+  background: #627881;
+  color: #FFF;
+  text-align: left; }
+  div.contact-bar a:-webkit-any-link {
+    color: #fff;
+    text-decoration: none; }
+  div.contact-bar a:link,div.contact-bar a:visited {
+    color: #fff;
+    text-decoration: none; }
+  div.contact-bar > section.container {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: .5em 0; }
+  div.contact-bar .social {
+    text-align: right; }
+
+.cta-banner {
+  text-align: center; }
+  .cta-banner .button {
+    background-color: #333;
+    border-color: #333; }
+  .cta-banner h2 {
+    text-align: left; }
+
+.hero-banner {
+  background: url("/images/empty-shop-banner.jpg") center center;
+  background-size: cover;
+  height: 300px;
+  color: #ffffff !important;
+  text-align: center; }
+
+.recent-post {
+  margin-bottom: 1em;
+  line-height: 1.5em; }
+  .recent-post .image {
+    float: left;
+    margin-right: 1em; }
+
+#breadcrumb {
+  background-color: #e7e7e7; }
+  #breadcrumb div.container, #breadcrumb div.container-fluid {
+    padding-top: 2em;
+    padding-bottom: 2em; }
+  #breadcrumb h1 {
+    font-size: 2em;
+    margin-bottom: 0; }
+  #breadcrumb .trail {
+    text-align: right; }
+
+.package {
+  border: 1px solid darkgray;
+  padding: 2em; }
+
+.circle-icon {
+  background: #EF3E3E;
+  display: inline-block;
+  border-radius: 500px;
+  line-height: 10em;
+  font-size: 5em;
+  height: 1.5em;
+  width: 1.5em;
+  text-align: center;
+  padding-top: .25em;
+  color: #fff; }
+
+#service-content h1 {
+  text-align: center; }
+
+.social-contact {
+  text-align: center; }
+  .social-contact h3 {
+    font-weight: bold;
+    font-size: 24px;
+    font-size: 1.5rem;
+    margin-top: 2em;
+    margin-bottom: .75em;
+    text-transform: uppercase; }
+  .social-contact strong {
+    color: #EF3E3E;
+    font-size: 44.8px;
+    font-size: 2.8rem; }
+
+/*# sourceMappingURL=shoppulse.css.map */

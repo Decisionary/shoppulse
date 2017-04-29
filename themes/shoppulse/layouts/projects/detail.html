@@ -1,0 +1,91 @@
+<html>
+{{ partial "header.html" . }}
+    <body class="page projects project-page project-detail-page">
+
+    {{ partial "navigation.html" . }}
+
+	<section id="breadcrumb">
+		<div class="container">
+			<div class="row">
+				<div class="col-md">
+					<h1>{{ .Params.title }}</h1>
+				</div>
+				<div class="col-md middle-md trail">
+					Home / {{ .Params.type }} / {{ .Params.project.name }}
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+    <section>
+	    <div class="container">
+		    <img src="http://placehold.it/1200x600" />
+	    </div>
+    </section>
+
+     <section>
+	    <div class="container">
+		    <div class="row">
+			    <div class="col-md">
+				    <h2>About project</h2>
+				    {{ .Params.project.info.about }}
+				    <h2>Our Task Was</h2>
+				    {{ .Params.project.info.task }}
+			    </div>
+			    <div class="col-md">
+				    <h2>Process</h2>
+				    {{ .Params.project.info.process }}
+			    </div>
+			    <div class="col-md">
+				    <h2>Result</h2>
+				    {{ .Params.project.info.result }}
+				    <h2>Conclusion</h2>
+				    {{ .Params.project.info.conclusion }}
+			    </div>
+		    </div>
+	    </div>
+    </section>
+
+    <section>
+	    <div class="container">
+		    <div class="row">
+			    <div class="col-md">
+				    <a href={{ .Params.project.url }}>Visit Website</a>
+			    </div>
+		    </div>
+		    <div class="row">
+			    <div class="col-md">
+				    Category: Website, Xpress - 10th February 2017
+			    </div>
+		    </div>
+	    </div>
+    </section>
+    <section>
+
+	    <div class="container">
+		    <div class="row">
+		    <div class="col-md">
+			    <hr />
+		    </div>
+	    </div>
+		    <div class="row">
+			    <div class="col-md"></div>
+			    <div class="col-md">
+
+				    <a href="/case-studies"><i class="fa fa-th"></i></a>
+			    </div>
+			    <div class="col-md"></div>
+		    </div>
+		    <div class="row">
+		    <div class="col-md">
+			    <hr />
+		    </div>
+	    </div>
+	    </div>
+
+    </section>
+    {{ partial "footer.html" . }}
+    </body>
+</html>
