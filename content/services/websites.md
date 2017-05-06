@@ -7,6 +7,7 @@ layout: detail
 service:
   name: Websites
   title: How does a website increase my car count?
+  benefits_title: What is a ShopPulse ShopPro Website?
   points:
       - title: Fast
         snippet: "Studies show that sites that take longer han half a second to load lose 80% of their draw for customers. Keep your customers happy and engaged with your site with a super fast, super stable site built on ShopPulse's ShopPro platform."

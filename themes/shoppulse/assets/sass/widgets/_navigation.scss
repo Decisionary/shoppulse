@@ -23,6 +23,7 @@
 		li {
 			list-style:none;
 			display:inline-block;
+			margin-bottom:0;
 			a {
 				font-size: 2rem;
 				padding: 2em .5em 0;
@@ -30,6 +31,12 @@
 				height:5em;
 				width:100%;
 				color: $brand-tertiary;
+
+				&.active {
+					background:#fff;
+					color: $brand-secondary;
+					font-weight:bold;
+				}
 				}
 			}
 		}

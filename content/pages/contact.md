@@ -1,4 +1,5 @@
 ---
+title: Contact ShopPulse to get your project started!
 url: /contact-us/
 type: pages
 layout: contact

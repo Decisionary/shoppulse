@@ -7,10 +7,10 @@
 	<section id="breadcrumb">
 		<div class="container">
 			<div class="row">
-				<div class="col-md">
+				<div class="column">
 					<h1>{{ .Params.service.name }}</h1>
 				</div>
-				<div class="col-md middle-md trail">
+				<div class="column middle-md trail">
 					Home / Services / {{ .Params.service.name }}
 				</div>
 			</div>
@@ -19,88 +19,51 @@
     <section id="service-content">
 	    <div class="container">
 		    <div class="row">
-		    <div class="col-md">
+		    <div class="column">
 			    <h1>{{ .Params.service.title }}</h1>
 		    </div>
 	    </div>
 	    <div class="row">
-		    <div class="col-md-4">
-			    <img src={{ printf "/images/services/%s.jpg" $.Params.service.name }}/>
+		    <div class="column column-25">
+			    <img src={{ printf "/images/services/%s.jpg" (lower $.Params.service.name) }}/>
 		    </div>
-		    <div class="col-md-8">
+		    <div class="column column-75">
 			    {{ .Content }}
 		    </div>
 	    </div>
 	    </div>
     </section>
-
+	{{ $cols := 2 }}
+	{{ $len := or (len .Params.service.points) 0 }}
+	{{if gt $len 0 }}
     <section id="service-details" class="bg-secondary">
 	    <div class="container">
 		    <div class="row section-title row">
-			    <div class="col-md">
-				    <h2>What is a ShopPulse Website?</h2>
+			    <div class="column">
+				    <h2>{{ .Params.service.benefits_title }}</h2>
 			    </div>
 		    </div>
-		    <div class="row">
-			    {{ range $.Params.service.points }}
-		        <div class="col-md-6">
-			        <h3>{{ .title }}</h3>
-			        <p>{{ .snippet }}</p>
-		        </div>
+
+
+			    {{ range $key,$value := .Params.service.points }}
+				{{ $isLastElem := not (sub (sub $len 1) $key) }}
+
+				{{ if modBool $key $cols }}
+				<div class="row">
+					{{ end }}
+					<div class="column">
+						<h3>{{ $value.title }}</h3>
+						<p>{{ $value.snippet }}</p>
+					</div>
+				{{ if or (modBool (add $key 1) $cols) $isLastElem }}
+					</div>
+				{{end}}
 		    {{ end }}
-		    </div>
-
-
 	    </div>
     </section>
-    <section id="packages">
-	    <div class="container">
-		    <div class="row">
-			    <div class="col-md section-title">
-				    <h2>Our Packages</h2>
-			    </div>
-		    </div>
-		    <div class="row">
-			    <div class="col-md">
-				    <div class="package">
-					    <h3>Xpress</h3>
-					    <ul>
-						    <li>ShopPro Website</li>
-						    <li>Choice of one of three themes</li>
-						    <li>Customized to match your shop</li>
-						    <li>Local SEO optimized</li>
-					    </ul>
-					    <a href="#" class="button">Select</a>
-				    </div>
-			    </div>
-			    <div class="col-md">
-				    <div class="package">
-					    <h3>The Works</h3>
-					    <ul>
-						    <li>ShopPro Website</li>
-						    <li>Choice of one of three themes</li>
-						    <li>Customized to match your shop</li>
-						    <li>Local SEO optimized</li>
-					    </ul>
-					    <a href="#" class="button">Select</a>
-				    </div>
-			    </div>
-			    <div class="col-md">
-				    <div class="package">
-					    <h3>Custom</h3>
-					    <ul>
-						    <li>ShopPro Website</li>
-						    <li>Choice of one of three themes</li>
-						    <li>Customized to match your shop</li>
-						    <li>Local SEO optimized</li>
-					    </ul>
-					    <a href="#" class="button">Select</a>
-				    </div>
-			    </div>
-		    </div>
-	    </div>
-    </section>
-
+	{{ end }}
+	{{ $services := printf "services/pricing/%s.html" (lower $.Params.service.name) }}
+	{{ partial $services . }}
     {{ partial "ctas/start-a-project.html" . }}
     {{ partial "footer.html" . }}
     </body>

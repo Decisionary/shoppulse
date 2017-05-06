@@ -1,3 +1,7 @@
+.container-fluid {
+  padding-left: 2em;
+  padding-right: 2em; }
+
 body {
   margin: 0;
   padding: 0;
@@ -29,6 +33,13 @@ div.container > .row:first-child > .column, div.container-fluid > .row:first-chi
   background-color: #333;
   border-color: #333; }
 
+.contact-methods .column {
+  text-align: center; }
+  .contact-methods .column .fa {
+    display: inline-block;
+    font-size: 3em;
+    margin-bottom: .33em; }
+
 #sidebar {
   background: #000;
   width: 100%; }
@@ -46,7 +57,8 @@ div.container > .row:first-child > .column, div.container-fluid > .row:first-chi
     text-align: right; }
     #sidebar ul li {
       list-style: none;
-      display: inline-block; }
+      display: inline-block;
+      margin-bottom: 0; }
       #sidebar ul li a {
         font-size: 32px;
         font-size: 2rem;
@@ -55,6 +67,10 @@ div.container > .row:first-child > .column, div.container-fluid > .row:first-chi
         height: 5em;
         width: 100%;
         color: #fff; }
+        #sidebar ul li a.active {
+          background: #fff;
+          color: #EF3E3E;
+          font-weight: bold; }
 
 .services-row {
   background: rgba(170, 170, 170, .0980392); }
@@ -112,7 +128,7 @@ section.bg-black {
     text-align: center; }
 
 div.contact-bar {
-  font-size: 1.5em;
+  font-size: 1em;
   background: #627881;
   color: #FFF;
   text-align: left; }

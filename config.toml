@@ -7,24 +7,19 @@ theme = "shoppulse"
     name="Websites"
     weight = -110
     identifier = "websites"
-    url = "/services/websites"
+    url = "/services/websites/"
 [[menu.main]]
     name="Marketing"
     weight = -109
     identifier = "marketing"
-    url = "/services/marketing"
+    url = "/services/marketing/"
 [[menu.main]]
     name="Advertising"
     weight = -107
     identifier = "advertising"
-    url = "/services/advertising"
-[[menu.main]]
-    name="Blog"
-    weight = -106
-    identifier = "blog"
-    url = "/articles"
+    url = "/services/advertising/"
 [[menu.main]]
     name="Contact Us"
     weight = -105
     identifier = "contact"
-    url = "/contact-us"
+    url = "/contact-us/"

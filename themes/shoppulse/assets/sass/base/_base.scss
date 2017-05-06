@@ -1,3 +1,7 @@
+.container-fluid {
+	padding-left: 2em;
+	padding-right:2em;
+}
 body {
 	margin:0;
 	padding:0;
@@ -36,3 +40,14 @@ div.container > .row:first-child > .column,div.container-fluid > .row:first-chil
 	background-color: #333;
 	border-color:#333;
 	}
+
+.contact-methods {
+	.column {
+		text-align:center;
+		.fa {
+			display:inline-block;
+			font-size:3em;
+			margin-bottom: .33em;
+		}
+	}
+}
